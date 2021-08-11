@@ -16,5 +16,5 @@
     },
     "background": true,
     "bandwidth": true,
-    "threads": 5
+    "threads": 10
 }
