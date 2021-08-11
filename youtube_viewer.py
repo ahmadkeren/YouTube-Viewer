@@ -1004,29 +1004,29 @@ def main():
 
 if __name__ == '__main__':
 
-    check_update()
+    # check_update()
     OSNAME = download_driver()
     create_database()
     urls = load_url()
     queries = load_search()
 
-    if os.path.isfile('config.json'):
-        with open('config.json', 'r') as openfile:
-            config = json.load(openfile)
+    # if os.path.isfile('config.json'):
+    #     with open('config.json', 'r') as openfile:
+    #         config = json.load(openfile)
 
-        if len(config) == 9:
-            print(json.dumps(config, indent=4))
-            previous = str(input(
-                bcolors.OKBLUE + 'Config file exists! Do you want to continue with previous saved preferences ? [Yes/No] : ' + bcolors.ENDC)).lower()
-            if previous == 'n' or previous == 'no':
-                create_config()
-            else:
-                pass
-        else:
-            print(bcolors.FAIL + 'Previous config file is not compatible with the latest script! Create a new one...' + bcolors.ENDC)
-            create_config()
-    else:
-        create_config()
+    #     if len(config) == 9:
+    #         print(json.dumps(config, indent=4))
+    #         previous = str(input(
+    #             bcolors.OKBLUE + 'Config file exists! Do you want to continue with previous saved preferences ? [Yes/No] : ' + bcolors.ENDC)).lower()
+    #         if previous == 'n' or previous == 'no':
+    #             create_config()
+    #         else:
+    #             pass
+    #     else:
+    #         print(bcolors.FAIL + 'Previous config file is not compatible with the latest script! Create a new one...' + bcolors.ENDC)
+    #         create_config()
+    # else:
+    #     create_config()
 
     with open('config.json', 'r') as openfile:
         config = json.load(openfile)
